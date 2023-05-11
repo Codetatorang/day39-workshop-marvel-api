@@ -1,0 +1,10 @@
+<mat-nav-list>
+    <a mat-list-item *ngFor="let c of characters" [routerLink]="['/details', c.id]">
+        {{ c.name }}
+    </a>
+</mat-nav-list>
+<div>
+    <button *ngIf="!disablePrevious" mat-raised-button type="button">Previous</button>
+    &nbsp;
+    <button mat-raised-button type="button" (click)="next()">Next</button>
+</div>
